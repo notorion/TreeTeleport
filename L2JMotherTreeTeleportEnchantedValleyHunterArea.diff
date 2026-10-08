@@ -1,0 +1,301 @@
+### Eclipse Workspace Patch 1.0
+#P L2J_Mobius_14.1_SamuraiCrow
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-1.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-1.html
+index 0cc6a12..fd8096e 100644
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-1.html
++++ dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-1.html
+@@ -1,7 +1,7 @@
+ <html><body>Celestiel:<br>
+-I see you want to teleport to some place else in the Enchanted Valley. Wherever you end up in the Enchanted Valley, you should be safe.<br>
+-I can guarantee that, based on what I've seen until now. So you'd like to head into the depths of the Enchanted Valley? Alright, understood. I will send you there. Please note that the places I can send you may be rather more dangerous than the others. Please exercise particular caution.<br>
+-When you return, the Teleport Device that we Mother Tree Guardians have installed may be used. However, remember that to use the <font color="LEVEL">Mother Tree Guardians Teleport Device</font>, your <font color="LEVEL">Faction level with the Mother Tree Guardians must be 4 or higher</font>.<br>
+-<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script Celestiel south">Teleport to the Southern Enchanted Valley</Button>
+-<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script Celestiel north">Teleport to the Northern Enchanted Valley</Button>
++So you're going to the Enchanted Valley... For the time being we teleport everyone there, no conditions, no limitations. I'll teleport you to the Enchanted Valley.<br>
++Remember, though, that the place I'm going to teleport you to might be very dangerous. So be careful!<br>
++Once you decide to come back, you can use the Mother Tree Guardians Teleport Device.<br>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script Celestiel south">Teleport to the southern part of the Enchanted Valley</Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script Celestiel north">Teleport to the northern part of the Enchanted Valley</Button>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-2.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-2.html
+deleted file mode 100644
+index 2274120..0000000
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-2.html
++++ /dev/null
+@@ -1,9 +0,0 @@
+-<html><body>Celestiel:<br>
+-The Mother Tree Guardians Talisman has been made with only the best of technologies that we the Mother Tree Guardians have.<br>
+-It was made to provide any help possible when engaging in the work of reviving the Mother Tree. If you want one made for you, please bring us the necessary ingredients.<br>
+-If you already have one, we can improve its performance. Are you interested?<br>
+-<Button ALIGN=LEFT ICON="Normal" action="bypass Script Celestiel 34234-3.html">"How is the talisman made?"</Button>
+-<Button ALIGN=LEFT ICON="Normal" action="bypass Script Celestiel 34234-4.html">"Tell me about the effects."</Button>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 2176">"I want to make a Mother Tree Guardians Talisman."</Button>
+-<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_multisell 2177">"I want to upgrade."</Button>
+-</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-3.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-3.html
+deleted file mode 100644
+index 6a5d6ca..0000000
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-3.html
++++ /dev/null
+@@ -1,7 +0,0 @@
+-<html><body>Celestiel:<br>
+-To make the Mother Tree Guardians Talisman, you'll need materials. The core is the <font color="LEVEL">Life Crystal</font>. It can be gained from the supply boxes given to you as a reward for carrying out our missions.<br>
+-You will also need <font color="LEVEL">Giant's Energy</font>. This you must find on your own. In addition, it will cost you a nominal fee. If you have all the ingredients for the Mother Tree Guardians Talisman, we will make one for you.<br>
+-The Mother Tree Guardians Talisman is also a token of appreciation of sorts that we issue to those who help us.<br>
+-While their performance can be improved, this will sometimes requires additional materials. Please be sure to check.<br>
+-<Button ALIGN=LEFT ICON="RETURN" action="bypass Script Celestiel 34234-2.html">Back</Button>
+-</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-4.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-4.html
+deleted file mode 100644
+index 831cb40..0000000
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-4.html
++++ /dev/null
+@@ -1,5 +0,0 @@
+-<html><body>Celestiel:<br>
+-The Mother Tree Guardians Talisman was developed by us in order to help the process of reviving the Mother Tree. It was made using our very best biological knowledge.<br>
+-If you are wearing the Mother Tree Guardians Talisman, you will have the upper hand when you are engaged in battle against an plant-type enemy.<br>
+-<Button ALIGN=LEFT ICON="RETURN" action="bypass Script Celestiel 34234-2.html">Back</Button>
+-</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-5.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-5.html
+deleted file mode 100644
+index 18d3336..0000000
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234-5.html
++++ /dev/null
+@@ -1,5 +0,0 @@
+-<html><body>Celestiel:<br>
+-I'm sorry, but I'm rather iffy about putting you on assignment.<br>
+-This is a dangerous place. Please take yourself some place safe.<br>
+-(This quest can only be undertaken by characters whose faction level with the Mother Tree Guardians is 2 or higher.)
+-</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234.html dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234.html
+index 49a2448..fcd0101 100644
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234.html
++++ dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/34234.html
+@@ -1,7 +1,5 @@
+ <html><body>Celestiel:<br>
+-Who goes there? Ah, you're an adventurer.<br>
+-I don't have anything in particular to tell you. What brings you here?<br>
+-<Button ALIGN=LEFT ICON="Normal" action="bypass Script Celestiel 34234-1.html">"Tell me about teleporting to the Enchanted Valley."</Button>
+-<Button ALIGN=LEFT ICON="Normal" action="bypass Script Celestiel 34234-2.html">"Tell me about the Mother Tree Guardians Talisman."</Button>
+-<Button ALIGN=LEFT ICON="QUEST" action="bypass Script">Quest</Button>
++Who are you? Ah, another adventurer.<br>
++I've no time for chit-chat. What do you want?<br>
++<Button ALIGN=LEFT ICON="Normal" action="bypass Script Celestiel 34234-1.html">Ask about movements within the Enchanted Valley</Button>
+ </body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/Celestiel.java dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/Celestiel.java
+index 11de91d..35fcad2 100644
+--- dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/Celestiel.java
++++ dist/game/data/scripts/ai/areas/EnchantedValley/Celestiel/Celestiel.java
+@@ -24,12 +24,11 @@
+ import org.l2jmobius.gameserver.entity.actor.Npc;
+ import org.l2jmobius.gameserver.entity.actor.Player;
+-import org.l2jmobius.gameserver.mechanics.script.Faction;
+ import org.l2jmobius.gameserver.mechanics.script.Script;
+ import org.l2jmobius.gameserver.network.serverpackets.PlaySound;
+ 
+ /**
+- * Celestiel AI
+- * @author Gigi
+- * @date 2017-06-13 - [20:09:34]
++ * Celestiel AI - Teleport no limit
++ * @author Notorion
++ * @date 2026-06-23 - [14:05:34]
+  */
+ public class Celestiel extends Script
+@@ -39,6 +38,6 @@
+ 	
+ 	// Teleports
+-	private static final Location SOUTH_LOCATION = new Location(110815, 59655, -3720);
+-	private static final Location NORTH_LOCATION = new Location(124040, 43970, -3720);
++	private static final Location SOUTH_LOCATION = new Location(116506, 60779, -4232);
++	private static final Location NORTH_LOCATION = new Location(121479, 40228, -3728);
+ 	
+ 	private static final String[] CELESTIEL_VOICE =
+@@ -61,7 +60,4 @@
+ 		{
+ 			case "34234-1.html":
+-			case "34234-2.html":
+-			case "34234-3.html":
+-			case "34234-4.html":
+ 			{
+ 				htmltext = event;
+@@ -70,24 +66,10 @@
+ 			case "south":
+ 			{
+-				if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2)
+-				{
+-					htmltext = "34234-5.html";
+-				}
+-				else
+-				{
+-					player.teleToLocation(SOUTH_LOCATION);
+-				}
++				player.teleToLocation(SOUTH_LOCATION);
+ 				break;
+ 			}
+ 			case "north":
+ 			{
+-				if (player.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS) < 2)
+-				{
+-					htmltext = "34234-5.html";
+-				}
+-				else
+-				{
+-					player.teleToLocation(NORTH_LOCATION);
+-				}
++				player.teleToLocation(NORTH_LOCATION);
+ 				break;
+ 			}
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-north.html dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-north.html
+new file mode 100644
+index 0000000..30d4f07
+--- /dev/null
++++ dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-north.html
+@@ -0,0 +1,8 @@
++<html><body>
++Mother Tree Guardians Teleport Device:<br>
++This device was created by the Mother Tree Guardians for exploring the Enchanted Valley.<br>
++Choose your destination.<br><br>
++Areas: the center of the Enchanted Valley, the southern part of the Enchanted Valley<br>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script MotherTreeTeleport center">Teleport to the center of the Enchanted Valley</Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script MotherTreeTeleport south">Teleport to the southern part of the Enchanted Valley</Button>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-south.html dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-south.html
+new file mode 100644
+index 0000000..f83a18b
+--- /dev/null
++++ dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/34241-south.html
+@@ -0,0 +1,8 @@
++<html><body>
++Mother Tree Guardians Teleport Device:<br>
++This device was created by the Mother Tree Guardians for exploring the Enchanted Valley.<br>
++Choose your destination.<br><br>
++Areas: the center of the Enchanted Valley, the northern part of the Enchanted Valley<br>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script MotherTreeTeleport center">Teleport to the center of the Enchanted Valley</Button>
++<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h Script MotherTreeTeleport north">Teleport to the northern part of the Enchanted Valley</Button>
++</body></html>
+\ No newline at end of file
+diff --git dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/MotherTreeTeleport.java dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/MotherTreeTeleport.java
+new file mode 100644
+index 0000000..9ca8b45
+--- /dev/null
++++ dist/game/data/scripts/ai/areas/EnchantedValley/MotherTreeTeleport/MotherTreeTeleport.java
+@@ -0,0 +1,90 @@
++/*
++ * Copyright (c) 2013 L2jMobius
++ * 
++ * Permission is hereby granted, free of charge, to any person obtaining a copy
++ * of this software and associated documentation files (the "Software"), to deal
++ * in the Software without restriction, including without limitation the rights
++ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
++ * copies of the Software, and to permit persons to whom the Software is
++ * furnished to do so, subject to the following conditions:
++ * 
++ * The above copyright notice and this permission notice shall be
++ * included in all copies or substantial portions of the Software.
++ * 
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
++ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
++ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
++ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
++ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
++ * IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
++ */
++package ai.areas.EnchantedValley.MotherTreeTeleport;
++
++import org.l2jmobius.gameserver.entity.Location;
++import org.l2jmobius.gameserver.entity.actor.Npc;
++import org.l2jmobius.gameserver.entity.actor.Player;
++import org.l2jmobius.gameserver.mechanics.script.Script;
++
++/**
++ * Mother Tree Teleport AI - Enchanted Valley
++ * @author Notorion
++ * @date 2026-06-23 - [14:05:34]
++ */
++public class MotherTreeTeleport extends Script
++{
++	// NPC ID
++	private static final int MOTHER_TREE_TELEPORT = 34241;
++	
++	// Teleports
++	private static final Location SOUTH_LOCATION = new Location(116506, 60779, -4232);
++	private static final Location NORTH_LOCATION = new Location(121479, 40228, -3728);
++	private static final Location CENTER_LOCATION = new Location(114846, 48431, -4528);
++	
++	private MotherTreeTeleport()
++	{
++		addTalkId(MOTHER_TREE_TELEPORT);
++		addFirstTalkId(MOTHER_TREE_TELEPORT);
++	}
++	
++	@Override
++	public String onEvent(String event, Npc npc, Player player)
++	{
++		String htmltext = null;
++		switch (event)
++		{
++			case "center":
++			{
++				player.teleToLocation(CENTER_LOCATION);
++				break;
++			}
++			case "south":
++			{
++				player.teleToLocation(SOUTH_LOCATION);
++				break;
++			}
++			case "north":
++			{
++				player.teleToLocation(NORTH_LOCATION);
++				break;
++			}
++		}
++		
++		return htmltext;
++	}
++	
++	@Override
++	public String onFirstTalk(Npc npc, Player player)
++	{
++		if (npc.calculateDistance3D(SOUTH_LOCATION.getX(), SOUTH_LOCATION.getY(), SOUTH_LOCATION.getZ()) < 500)
++		{
++			return "34241-south.html";
++		}
++		
++		return "34241-north.html";
++	}
++	
++	public static void main(String[] args)
++	{
++		new MotherTreeTeleport();
++	}
++}
+\ No newline at end of file
+diff --git dist/game/data/spawns/Hunters/EnchantedValley.xml dist/game/data/spawns/Hunters/EnchantedValley.xml
+index 03daca2..a4054a1 100644
+--- dist/game/data/spawns/Hunters/EnchantedValley.xml
++++ dist/game/data/spawns/Hunters/EnchantedValley.xml
+@@ -3,10 +3,12 @@
+ 	<spawn name="EnchantedValley">
+ 		<group>
+-			<npc id="32570" x="113032" y="48168" z="-4588" heading="57089" respawnTime="60sec" /> <!-- Eric - Herb Collector -->
++			<!-- <npc id="32570" x="113032" y="48168" z="-4588" heading="57089" respawnTime="60sec" /> --> <!-- Eric - Herb Collector -->
+ 			<npc id="30747" x="115032" y="47656" z="-4615" heading="22020" respawnTime="60sec" /> <!-- Mimyu - Fairy -->
+ 			<npc id="34233" x="114728" y="48632" z="-4539" heading="45261" respawnTime="60sec" /> <!-- Irene - Guardian -->
+ 			<npc id="34234" x="114984" y="48408" z="-4536" heading="28275" respawnTime="60sec" /> <!-- Celestiel -->
+-			<npc id="34087" x="111921" y="61693" z="-4576" respawnTime="60sec" /> <!-- Herb Collector -->
+-			<npc id="34087" x="117697" y="53051" z="-4632" respawnTime="60sec" /> <!-- Herb Collector -->
++			<!-- <npc id="34087" x="111921" y="61693" z="-4576" respawnTime="60sec" /> --> <!-- Herb Collector -->
++			<!-- <npc id="34087" x="117697" y="53051" z="-4632" respawnTime="60sec" /> --> <!-- Herb Collector -->
++			<npc id="34241" x="121401" y="40329" z="-3728" heading="43266" respawnTime="60sec" /> <!-- Mother Tree Guardians Teleport Device North -->
++			<npc id="34241" x="116602" y="60878" z="-4240" heading="11380" respawnTime="60sec" /> <!-- Mother Tree Guardians Teleport Device South -->
+ 		</group>
+ 	</spawn>
